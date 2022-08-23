@@ -20,4 +20,8 @@ button {
     border: 1px solid rgb(5, 130, 131);
     font-family: system-ui;
 }
+
+button:hover {
+    cursor: pointer;
+}
 </style>

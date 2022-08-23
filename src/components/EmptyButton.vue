@@ -19,5 +19,13 @@ button {
     color: rgb(5, 130, 131);
     border: 1px solid rgb(5, 130, 131);
     font-family: system-ui;
+    transition: 0.5s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(5, 130, 131);
+    color: white;
+    border: 1px solid rgb(5, 130, 131);
 }
 </style>
