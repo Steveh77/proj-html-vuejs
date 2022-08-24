@@ -37,6 +37,13 @@ body {
   border-radius: 3px;
 }
 
+.darkgrey-span {
+  padding: 0 5px 0 5px;
+  color: white;
+  background-color: rgb(14, 39, 45);
+  border-radius: 3px;
+}
+
 /* -------UTILS------- */
 .container {
   width: 1000px;
