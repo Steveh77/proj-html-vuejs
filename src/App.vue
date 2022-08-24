@@ -1,16 +1,25 @@
 <template>
   <div id="app">
-    <MyHeader />
+    <MyHeader :empty-buttons="emptyButtons" :fill-buttons="fillButtons" />
+    <TheBody :empty-buttons="emptyButtons" :fill-buttons="fillButtons" />
   </div>
 </template>
 
 <script>
 import MyHeader from './components/MyHeader.vue';
+import TheBody from './components/TheBody.vue';
 export default {
   name: 'App',
   components: {
-    MyHeader
-  }
+    MyHeader,
+    TheBody
+  },
+  data() {
+    return {
+      emptyButtons: ['VIEW MAP', 'READ MORE'],
+      fillButtons: ['GET IN TOUCH', 'SEND', 'SEE ALL',]
+    }
+  },
 }
 </script>
 
@@ -45,8 +54,6 @@ body {
 .m-right-5px {
   margin-right: 5px;
 }
-
-
 
 /* ----------------------- */
 </style>

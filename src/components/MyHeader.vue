@@ -56,12 +56,16 @@
 import FillButton from './FillButton.vue';
 import EmptyButton from './EmptyButton.vue';
 export default {
+    props: {
+        emptyButtons: Array,
+        fillButtons: Array
+    },
     data() {
         return {
             links: ["HOME", "SERVICES", "ABOUT", "PROJECT", "RESULT"]
         };
     },
-    components: { FillButton, EmptyButton }
+    components: { FillButton, EmptyButton },
 }
 </script>
 
