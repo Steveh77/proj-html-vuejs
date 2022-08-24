@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <MyHeader :empty-buttons="emptyButtons" :fill-buttons="fillButtons" />
-    <TheBody :empty-buttons="emptyButtons" :fill-buttons="fillButtons" />
+    <TheBody :empty-buttons="emptyButtons" :fill-buttons="fillButtons" :results="results" />
   </div>
 </template>
 
@@ -17,7 +17,30 @@ export default {
   data() {
     return {
       emptyButtons: ['VIEW MAP', 'READ MORE'],
-      fillButtons: ['GET IN TOUCH', 'SEND', 'SEE ALL',]
+      fillButtons: ['GET IN TOUCH', 'SEND', 'SEE ALL',],
+      results: [
+        {
+          result: 1,
+          number: 128,
+          name: "Certification"
+        },
+        {
+          result: 1,
+          number: 230,
+          name: "Employees"
+        },
+        {
+          result: 1,
+          number: 517,
+          name: "Customers"
+        },
+        {
+          result: 1,
+          number: 94,
+          name: "Countries Served"
+        },
+
+      ]
     }
   },
 }
@@ -40,7 +63,7 @@ body {
 .darkgrey-span {
   padding: 0 5px 0 5px;
   color: white;
-  background-color: rgb(14, 39, 45);
+  background-color: rgb(14, 39, 45, 0.7);
   border-radius: 3px;
 }
 

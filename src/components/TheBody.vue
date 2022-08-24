@@ -75,14 +75,30 @@
           <div v-for="card in projectCard" :key="card" class="project-card">
             <img :src='"../assets/images/project-" + card.photo + ".jpg"' alt="">
             <div>
+              <i class="fa-solid fa-arrow-right"></i>
               <h4>{{ card.description }}</h4>
+              <p class="hover-text">{{ card.text }}</p>
             </div>
           </div>
         </div>
 
       </div>
     </section>
-
+    <!-- SECTION RESULTS -->
+    <section class="result">
+      <div class="container">
+        <h5>WHAT ARE WE DOING</h5>
+        <h2><span class="darkgrey-span">Results</span> in Number</h2>
+        <div class="container-results">
+          <ul>
+            <li v-for="result in results" :key="result">
+              <span>{{ result.number }}</span>
+              <h5>{{ result.name }}</h5>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -90,6 +106,9 @@
 import FillButton from './FillButton.vue';
 import EmptyButton from './EmptyButton.vue';
 export default {
+  props: {
+    results: Array
+  },
   components: { FillButton, EmptyButton },
   data() {
     return {
@@ -154,27 +173,34 @@ export default {
       ],
       projectCard: [{
         photo: '1',
-        description: 'Academic professional program in social media'
+        description: 'Academic professional program in social media',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit'
+
       },
       {
         photo: '2',
-        description: "President's speech at the annual meetings"
+        description: "President's speech at the annual meetings",
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit'
       },
       {
         photo: '3',
-        description: 'international business trip in Shanghai'
+        description: 'international business trip in Shanghai',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit'
       },
       {
         photo: '4',
-        description: 'Technology workshop with education theme'
+        description: 'Technology workshop with education theme',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit'
       },
       {
         photo: '5',
-        description: 'Donation of clothes and food to the partner NGO'
+        description: 'Donation of clothes and food to the partner NGO',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit'
       },
       {
         photo: '6',
-        description: 'Confraternization of the procurement team'
+        description: 'Confraternization of the procurement team',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit'
       },
 
       ]
@@ -404,7 +430,16 @@ export default {
         img {
           width: 100%;
           border-radius: 10px;
-          filter: brightness(0.5);
+          filter: brightness(0.6);
+        }
+
+        i {
+          position: absolute;
+          top: 35px;
+          right: 30px;
+          color: white;
+          font-size: 31px;
+          opacity: 0;
         }
 
         h4 {
@@ -414,6 +449,78 @@ export default {
           font-size: 23px;
           color: white;
 
+        }
+
+        p {
+          opacity: 0;
+          position: absolute;
+          bottom: 24px;
+          color: white;
+          margin: 10px;
+        }
+      }
+
+      .project-card:hover {
+        cursor: pointer;
+
+        img {
+          filter: brightness(0.3);
+          transition: 0.5s;
+
+        }
+
+        i {
+          opacity: 1;
+          transition: 1s;
+        }
+
+        h4 {
+          bottom: 70px;
+          transition: 0.5s;
+        }
+
+        p {
+          opacity: 1;
+          transition: 2s;
+
+        }
+      }
+    }
+  }
+}
+
+.result {
+  height: 500px;
+  text-align: center;
+  background-image: url(../assets/images/bg-7.jpg);
+  background-position: center;
+
+  h5 {
+    color: rgb(0, 166, 170);
+    padding-top: 100px;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  .container-results {
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+
+      li {
+        color: white;
+        font-size: 30px;
+        color: aqua;
+        font-weight: bold;
+        margin-top: 25px;
+
+        h5 {
+          padding-top: 0;
+          margin-top: 20px;
+          color: white;
         }
       }
     }
