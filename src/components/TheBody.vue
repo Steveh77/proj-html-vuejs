@@ -58,6 +58,30 @@
         <img src="../assets/images/about-4.jpg" alt="">
       </div>
     </section>
+    <div class="divisorio">
+      <img src="../assets/svgs/svg-0.svg" alt="">
+    </div>
+    <!-- SECTION PROJECTS -->
+    <section class="projects">
+      <div class="container">
+        <h5>WE NEED MORE FOR EVERYONE</h5>
+        <h2>Action &amp; <span class="acquagreen-span">Projects</span></h2>
+        <div class="links">
+          <ul>
+            <li v-for="link in projectLinks" :key="link"><a href="aa">{{ link }}</a></li>
+          </ul>
+        </div>
+        <div class="project-container-card">
+          <div v-for="card in projectCard" :key="card" class="project-card">
+            <img :src='"../assets/images/project-" + card.photo + ".jpg"' alt="">
+            <div>
+              <h4>{{ card.description }}</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
   </div>
 </template>
@@ -124,7 +148,36 @@ export default {
         icon: 'fa-graduation-cap',
         title: 'Expertise',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit'
-      },]
+      },],
+      projectLinks: [
+        'ALL', 'INSTITUTIONALS', 'SOCIAL', 'EVENTS', 'INNOVATIONS', 'ENVIRONMENT', 'TECHNOLOGY'
+      ],
+      projectCard: [{
+        photo: '1',
+        description: 'Academic professional program in social media'
+      },
+      {
+        photo: '2',
+        description: "President's speech at the annual meetings"
+      },
+      {
+        photo: '3',
+        description: 'international business trip in Shanghai'
+      },
+      {
+        photo: '4',
+        description: 'Technology workshop with education theme'
+      },
+      {
+        photo: '5',
+        description: 'Donation of clothes and food to the partner NGO'
+      },
+      {
+        photo: '6',
+        description: 'Confraternization of the procurement team'
+      },
+
+      ]
     }
   },
 }
@@ -142,7 +195,6 @@ export default {
     }
 
     h2 {
-      font-size: 50px;
       color: rgb(33, 51, 62);
     }
 
@@ -238,7 +290,6 @@ export default {
       }
 
       h2 {
-        font-size: 50px;
         color: white;
       }
 
@@ -299,6 +350,73 @@ export default {
     right: 0;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.projects {
+  .container {
+    text-align: center;
+
+    h5 {
+      padding-top: 70px;
+      color: rgb(0, 166, 170);
+    }
+
+    .links {
+
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+
+        li {
+          a {
+            text-decoration: none;
+            color: rgb(96, 109, 117);
+            box-shadow: inset 0 0 0 0 rgb(213, 231, 232);
+            margin: 0 -.25rem;
+            padding: 6px .25rem;
+            transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+            border-radius: 3px;
+          }
+
+          a:hover {
+            border-radius: 5px;
+            box-shadow: inset 160px 0 0 0 rgb(218, 236, 237);
+            color: rgb(65, 80, 90);
+          }
+        }
+      }
+    }
+
+    .project-container-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin-top: 50px;
+
+      .project-card {
+        position: relative;
+        width: 30%;
+        margin-bottom: 20px;
+
+
+        img {
+          width: 100%;
+          border-radius: 10px;
+          filter: brightness(0.5);
+        }
+
+        h4 {
+          position: absolute;
+          bottom: 30px;
+          margin: 19px;
+          font-size: 23px;
+          color: white;
+
+        }
+      }
+    }
   }
 }
 </style>

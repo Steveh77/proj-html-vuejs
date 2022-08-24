@@ -44,6 +44,10 @@ body {
   border-radius: 3px;
 }
 
+h2 {
+  font-size: 50px;
+}
+
 /* -------UTILS------- */
 .container {
   width: 1000px;
