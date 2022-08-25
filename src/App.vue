@@ -4,6 +4,7 @@
     <TheBody :empty-buttons="emptyButtons" :fill-buttons="fillButtons" :results="results"
       :collaboration="collaboration" />
     <TheFooter />
+    <TheFooterPart2 />
   </div>
 </template>
 
@@ -11,12 +12,14 @@
 import MyHeader from './components/MyHeader.vue';
 import TheBody from './components/TheBody.vue';
 import TheFooter from './components/TheFooter.vue';
+import TheFooterPart2 from './components/TheFooterPart2.vue';
 export default {
   name: 'App',
   components: {
     MyHeader,
     TheBody,
-    TheFooter
+    TheFooter,
+    TheFooterPart2
   },
   data() {
     return {

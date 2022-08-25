@@ -269,6 +269,7 @@ export default {
 
             img {
               height: 50px;
+              filter: invert(59%) sepia(61%) saturate(494%) hue-rotate(78deg) brightness(96%) contrast(88%);
             }
 
             i {
@@ -300,6 +301,8 @@ export default {
 
   img {
     margin: -28px auto;
+    filter: invert(59%) sepia(61%) saturate(494%) hue-rotate(78deg) brightness(96%) contrast(88%);
+    opacity: 0.5;
   }
 }
 
