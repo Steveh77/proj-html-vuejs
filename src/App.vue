@@ -1,18 +1,22 @@
 <template>
   <div id="app">
     <MyHeader :empty-buttons="emptyButtons" :fill-buttons="fillButtons" />
-    <TheBody :empty-buttons="emptyButtons" :fill-buttons="fillButtons" :results="results" />
+    <TheBody :empty-buttons="emptyButtons" :fill-buttons="fillButtons" :results="results"
+      :collaboration="collaboration" />
+    <TheFooter />
   </div>
 </template>
 
 <script>
 import MyHeader from './components/MyHeader.vue';
 import TheBody from './components/TheBody.vue';
+import TheFooter from './components/TheFooter.vue';
 export default {
   name: 'App',
   components: {
     MyHeader,
-    TheBody
+    TheBody,
+    TheFooter
   },
   data() {
     return {
@@ -40,6 +44,38 @@ export default {
           name: "Countries Served"
         },
 
+      ],
+      collaboration: [
+        {
+          id: 1,
+          logo: 'logo-4.png',
+          name: "jquery"
+        },
+        {
+          id: 2,
+          logo: 'logo-5.png',
+          name: "less"
+        },
+        {
+          id: 3,
+          logo: 'logo-1.png',
+          name: "wooCommerce"
+        },
+        {
+          id: 4,
+          logo: 'logo-2.png',
+          name: "wordpress"
+        },
+        {
+          id: 5,
+          logo: 'logo-3.png',
+          name: "pingdom"
+        },
+        {
+          id: 6,
+          logo: 'logo-4.png',
+          name: "jquery"
+        }
       ]
     }
   },
@@ -55,7 +91,7 @@ body {
 /* GENERICS */
 .acquagreen-span {
   padding: 0 5px 0 5px;
-  color: rgb(5, 130, 131);
+  color: #41C457;
   background-color: rgb(213, 231, 232);
   border-radius: 3px;
 }

@@ -99,6 +99,13 @@
         </div>
       </div>
     </section>
+    <!-- SECTION COLLABORATION -->
+    <section class="collaboration">
+      <div class="container">
+        <img v-for="collab in collaboration" :key="collab.id" src="../assets/images/logo-1.png" alt="">
+
+      </div>
+    </section>
   </div>
 </template>
 
@@ -107,7 +114,8 @@ import FillButton from './FillButton.vue';
 import EmptyButton from './EmptyButton.vue';
 export default {
   props: {
-    results: Array
+    results: Array,
+    collaboration: Array
   },
   components: { FillButton, EmptyButton },
   data() {
@@ -217,7 +225,7 @@ export default {
   .container {
     h5 {
       padding-top: 150px;
-      color: rgb(0, 166, 170);
+      color: #41C457;
     }
 
     h2 {
@@ -312,7 +320,7 @@ export default {
 
       h5 {
         margin-top: 100px;
-        color: rgb(0, 166, 170);
+        color: #41C457;
       }
 
       h2 {
@@ -337,7 +345,7 @@ export default {
             display: flex;
 
             i {
-              color: rgb(5, 130, 131);
+              color: #41C457;
               font-size: 25px;
               padding-right: 5px;
               display: flex;
@@ -363,7 +371,7 @@ export default {
         }
 
         .empty-btn-company:hover {
-          background-color: rgb(5, 130, 131);
+          background-color: #41C457;
         }
       }
     }
@@ -385,7 +393,7 @@ export default {
 
     h5 {
       padding-top: 70px;
-      color: rgb(0, 166, 170);
+      color: #41C457;
     }
 
     .links {
@@ -496,7 +504,7 @@ export default {
   background-position: center;
 
   h5 {
-    color: rgb(0, 166, 170);
+    color: #41C457;
     padding-top: 100px;
   }
 
@@ -507,13 +515,13 @@ export default {
   .container-results {
     ul {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       list-style-type: none;
 
       li {
         color: white;
         font-size: 30px;
-        color: aqua;
+        color: #41C457;
         font-weight: bold;
         margin-top: 25px;
 
@@ -523,6 +531,20 @@ export default {
           color: white;
         }
       }
+    }
+  }
+}
+
+.collaboration {
+  height: 200px;
+  background-color: black;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      height: 30px;
     }
   }
 }
