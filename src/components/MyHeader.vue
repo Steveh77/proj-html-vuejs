@@ -31,7 +31,7 @@
                             <ul>
                                 <li v-for="link in links" :key="link"><a href="#">{{ link }}</a></li>
                                 <li>
-                                    <FillButton />
+                                    <GetInTouchButton />
                                 </li>
                             </ul>
                         </div>
@@ -41,8 +41,8 @@
                         <p>No matters what your company needs,we will be <br> ready to assist you in the best possible
                             way
                         </p>
-                        <FillButton class="m-10px" />
-                        <EmptyButton class="m-10px" />
+                        <GetInTouchButton class="m-10px" />
+                        <ReadMoreButton class="m-10px" />
                     </div>
                 </div>
             </div>
@@ -53,19 +53,15 @@
 </template>
 
 <script>
-import FillButton from './FillButton.vue';
-import EmptyButton from './EmptyButton.vue';
+import GetInTouchButton from './GetInTouchButton.vue';
+import ReadMoreButton from './ReadMoreButton.vue';
 export default {
-    props: {
-        emptyButtons: Array,
-        fillButtons: Array
-    },
     data() {
         return {
             links: ["HOME", "SERVICES", "ABOUT", "PROJECT", "RESULT"]
         };
     },
-    components: { FillButton, EmptyButton },
+    components: { GetInTouchButton, ReadMoreButton },
 }
 </script>
 

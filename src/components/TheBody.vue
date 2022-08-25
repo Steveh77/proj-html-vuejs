@@ -8,7 +8,7 @@
         <div class="text-button">
           <p>We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of <br>
             experienced and renowned professionals. These are some options that you can hire</p>
-          <FillButton />
+          <SeeAllButton />
         </div>
         <!-- SERVICES CARD -->
         <div class="services-cards">
@@ -51,8 +51,8 @@
             </div>
           </div>
           <div class="buttons">
-            <FillButton />
-            <EmptyButton class="empty-btn-company" />
+            <GetInTouchButton />
+            <ReadMoreButton class="empty-btn-company" />
           </div>
         </div>
         <img src="../assets/images/about-4.jpg" alt="">
@@ -102,7 +102,7 @@
     <!-- SECTION COLLABORATION -->
     <section class="collaboration">
       <div class="container">
-        <img v-for="collab in collaboration" :key="collab.id" src="../assets/images/logo-1.png" alt="">
+        <img v-for="collab in collaboration" :key="collab.id" :src="collab.logo" alt="">
 
       </div>
     </section>
@@ -110,14 +110,15 @@
 </template>
 
 <script>
-import FillButton from './FillButton.vue';
-import EmptyButton from './EmptyButton.vue';
+import GetInTouchButton from './GetInTouchButton.vue';
+import ReadMoreButton from './ReadMoreButton.vue';
+import SeeAllButton from './SeeAllButton.vue';
 export default {
   props: {
     results: Array,
     collaboration: Array
   },
-  components: { FillButton, EmptyButton },
+  components: { GetInTouchButton, ReadMoreButton, SeeAllButton },
   data() {
     return {
       servicesCards: [
@@ -273,9 +274,17 @@ export default {
             }
 
             i {
+              height: 36.5px;
+              width: 36.5px;
               font-size: 30px;
               color: rgb(130, 193, 193);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%;
+
             }
+
           }
 
           h4 {
@@ -289,7 +298,24 @@ export default {
 
 
       }
+
+      .services-card:hover {
+        cursor: pointer;
+
+        .container-card {
+          .icons {
+            i {
+              color: #41C457;
+              background-color: rgb(133, 213, 213);
+              transition: 0.5s;
+            }
+
+          }
+        }
+
+      }
     }
+
   }
 }
 
@@ -545,9 +571,12 @@ export default {
   .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 100%;
 
     img {
       height: 30px;
+      filter: invert(0.5);
     }
   }
 }

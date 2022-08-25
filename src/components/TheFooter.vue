@@ -15,7 +15,7 @@
                     <input type="text" placeholder="More Info">
                     <textarea rows="10" cols="89" placeholder="Message"></textarea>
                 </div>
-                <FillButton />
+                <SendButton />
             </div>
             <div class="contacts">
                 <h3>Example.inc</h3>
@@ -33,17 +33,18 @@
                     <i class="fa-solid fa-location-dot"></i>
                     <span> Main Avenue,987</span>
                 </div>
-                <EmptyButton />
+                <ViewMapButton />
             </div>
         </div>
     </section>
 </template>
 
 <script>
-import EmptyButton from './EmptyButton.vue';
-import FillButton from './FillButton.vue';
+import SendButton from './SendButton.vue';
+import ViewMapButton from './ViewMapButton.vue';
+
 export default {
-    components: { EmptyButton, FillButton }
+    components: { SendButton, ViewMapButton }
 }
 </script>
 

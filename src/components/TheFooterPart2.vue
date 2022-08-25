@@ -28,7 +28,7 @@
                             <span> Main Avenue,987</span>
                         </div>
                     </li>
-                    <FillButton class="footerButton" />
+                    <GetInTouchButton class="footerButton" />
                 </ul>
             </div>
             <div class="footer-cards">
@@ -59,7 +59,7 @@
 </template>
 
 <script>
-import FillButton from './FillButton.vue';
+import GetInTouchButton from './GetInTouchButton.vue';
 
 export default {
     data() {
@@ -80,7 +80,7 @@ export default {
             ]
         };
     },
-    components: { FillButton }
+    components: { GetInTouchButton }
 }
 </script>
 
