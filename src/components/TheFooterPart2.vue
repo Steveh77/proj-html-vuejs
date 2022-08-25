@@ -48,6 +48,12 @@
                 </div>
             </div>
         </div>
+        <div class="copyright">
+            <div class="container">
+                <p>Enjoy the low price. We are tracking any intention of piracy</p>
+                <p><i class="fa-regular fa-copyright"></i>2020 NEXGEN is Proudly Powered by <span>Codings</span>.</p>
+            </div>
+        </div>
 
     </section>
 </template>
@@ -81,7 +87,6 @@ export default {
 <style lang="scss" scoped>
 .footer-menu {
     margin-top: 50px;
-    height: 500px;
     background-color: rgb(17, 17, 23);
 
     .container {
@@ -151,6 +156,20 @@ export default {
                     }
                 }
 
+            }
+        }
+    }
+
+    .copyright {
+        color: rgb(188, 190, 188);
+        margin-top: 50px;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                color: #41C457;
             }
         }
     }
